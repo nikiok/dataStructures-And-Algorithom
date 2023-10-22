@@ -3,22 +3,22 @@ package Algorithm.Get_started;
 import java.util.Scanner;
 
 public class TowersOfHanoi {
-    static int m =0;//Ê†áËÆ∞ÁßªÂä®Ê¨°Êï∞
-    //ÂÆûÁé∞ÁßªÂä®ÁöÑÂáΩÊï∞
+    static int m =0;//±Íº«“∆∂Ø¥Œ ˝
+    // µœ÷“∆∂Øµƒ∫Ø ˝
     public static void move(int disks,char N,char M)
     {
-        System.out.println("Á¨¨" + (++m) +" Ê¨°ÁßªÂä® : " +" Êää "+ disks+" Âè∑ÂúÜÁõò‰ªé " + N +" ->ÁßªÂà∞->  " + M);
+        System.out.println("µ⁄" + (++m) +" ¥Œ“∆∂Ø : " +" ∞— "+ disks+" ∫≈‘≤≈Ã¥” " + N +" ->“∆µΩ->  " + M);
     }
-    //ÈÄíÂΩíÂÆûÁé∞Ê±âËØ∫Â°îÁöÑÂáΩÊï∞
+    //µ›πÈ µœ÷∫∫≈µÀ˛µƒ∫Ø ˝
     public static void hanoi(int n,char A,char B,char C)
     {
-        if(n == 1)//ÂúÜÁõòÂè™Êúâ‰∏Ä‰∏™Êó∂ÔºåÂè™ÈúÄÂ∞ÜÂÖ∂‰ªéAÂ°îÁßªÂà∞CÂ°î
-            TowersOfHanoi.move(1, A, C);//Â∞ÜÁºñbÂè∑‰∏∫1ÁöÑÂúÜÁõò‰ªéAÁßªÂà∞C
+        if(n == 1)//‘≤≈Ã÷ª”–“ª∏ˆ ±£¨÷ª–ËΩ´∆‰¥”AÀ˛“∆µΩCÀ˛
+            TowersOfHanoi.move(1, A, C);//Ω´±‡b∫≈Œ™1µƒ‘≤≈Ã¥”A“∆µΩC
         else
-        {//Âê¶Âàô
-            hanoi(n - 1, A, C, B);//ÈÄíÂΩíÔºåÊääAÂ°î‰∏äÁºñÂè∑1~n-1ÁöÑÂúÜÁõòÁßªÂà∞B‰∏äÔºå‰ª•C‰∏∫ËæÖÂä©Â°î
-            TowersOfHanoi.move(n, A, C);//ÊääAÂ°î‰∏äÁºñÂè∑‰∏∫nÁöÑÂúÜÁõòÁßªÂà∞C‰∏ä
-            hanoi(n - 1, B, A, C);//ÈÄíÂΩíÔºåÊääBÂ°î‰∏äÁºñÂè∑1~n-1ÁöÑÂúÜÁõòÁßªÂà∞C‰∏äÔºå‰ª•A‰∏∫ËæÖÂä©Â°î
+        {//∑Ò‘Ú
+            hanoi(n - 1, A, C, B);//µ›πÈ£¨∞—AÀ˛…œ±‡∫≈1~n-1µƒ‘≤≈Ã“∆µΩB…œ£¨“‘CŒ™∏®÷˙À˛
+            TowersOfHanoi.move(n, A, C);//∞—AÀ˛…œ±‡∫≈Œ™nµƒ‘≤≈Ã“∆µΩC…œ
+            hanoi(n - 1, B, A, C);//µ›πÈ£¨∞—BÀ˛…œ±‡∫≈1~n-1µƒ‘≤≈Ã“∆µΩC…œ£¨“‘AŒ™∏®÷˙À˛
         }
     }
     public static void main(String[] args) {
@@ -27,12 +27,12 @@ public class TowersOfHanoi {
         char B = 'B';
         char C = 'C';
         System.out.println("******************************************************************************************");
-        System.out.println("ËøôÊòØÊ±âËØ∫Â°îÈóÆÈ¢òÔºàÊääAÂ°î‰∏äÁºñÂè∑‰ªéÂ∞èÂè∑Âà∞Â§ßÂè∑ÁöÑÂúÜÁõò‰ªéAÂ°îÈÄöËøáBËæÖÂä©Â°îÁßªÂä®Âà∞CÂ°î‰∏äÂéª");
+        System.out.println("’‚ «∫∫≈µÀ˛Œ Ã‚£®∞—AÀ˛…œ±‡∫≈¥”–°∫≈µΩ¥Û∫≈µƒ‘≤≈Ã¥”AÀ˛Õ®π˝B∏®÷˙À˛“∆∂ØµΩCÀ˛…œ»•");
         System.out.println("******************************************************************************************");
-        System.out.print("ËØ∑ËæìÂÖ•ÂúÜÁõòÁöÑ‰∏™Êï∞Ôºö");
+        System.out.print("«Î ‰»Î‘≤≈Ãµƒ∏ˆ ˝£∫");
         int disks = imput.nextInt();
         TowersOfHanoi.hanoi(disks, A, B, C);
-        System.out.println(">>ÁßªÂä®‰∫Ü" + m + "Ê¨°ÔºåÊääA‰∏äÁöÑÂúÜÁõòÈÉΩÁßªÂä®Âà∞‰∫ÜC‰∏ä");
+        System.out.println(">>“∆∂Ø¡À" + m + "¥Œ£¨∞—A…œµƒ‘≤≈Ã∂º“∆∂ØµΩ¡ÀC…œ");
         imput.close();
     }
 

@@ -2,8 +2,11 @@ package Algorithm.Backtrack_Method;
 
 import java.util.*;
 
+/**
+ * ∞Àª ∫ÛŒ Ã‚
+ */
 public class Queens {
-    private static final int BOARD_SIZE = 8;
+    private static final int BOARD_SIZE = 8; //∆Â≈Ã≥ﬂ¥Á
 
     public static void main(String[] args) {
         int[] queens = new int[BOARD_SIZE];
