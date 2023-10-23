@@ -1,5 +1,7 @@
 package Algorithm.test;
 
+import java.util.Arrays;
+
 //快速查找
 /*使用了递归函数quickSort()来进行快速排序。函数partition()用于确定一个枢轴点（pivot），并将数组中的元素分为两个子数组，以便在这两个子数组上递归地进行快速排序。
 在每次递归时，我们选择一个新的枢轴点，并将数组中的元素分为两个子数组。
@@ -36,8 +38,6 @@ public class QuickSort {
         int start = 0;
         int end = arr.length - 1;
         quickSort(arr, start, end);
-        for (int i = 0; i < arr.length; i++) {
-            System.out.print(arr[i] + " ");
-        }
+        System.out.println(Arrays.toString(arr));
     }
 }
