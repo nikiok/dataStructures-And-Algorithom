@@ -13,8 +13,8 @@ import java.util.Date;
  */
 public class ShellSort {
 	public static void main(String[] args) {
-		int arr[] = {8,9,1,7,2,3,5,4,6,0};
-		shellSort(arr);
+		int[] arr = {8,9,1,7,2,3,5,4,6,0};
+		shellSort2(arr);
 
 //		int [] arr2 = new int[100000];
 //		for (int i = 0; i < arr2.length; i++) {
