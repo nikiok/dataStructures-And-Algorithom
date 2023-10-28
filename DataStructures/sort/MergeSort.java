@@ -40,6 +40,7 @@ public class MergeSort {
 
 		//(1)
 		//先把左右两边(有序)的数据按照规则填充到temp数组,直到左右两边的有序序列，有一边处理完毕为止
+
 		while (i <= mid && j <= right){
 			if (arr[i] <= arr[j]){
 				temp[t] = arr[i];
@@ -59,11 +60,13 @@ public class MergeSort {
 			t += 1;
 			i += 1;
 		}
+
 		while (j <= right ){ //左边的有序序列还有剩余元素，就全部填充到temp
 			temp[t] = arr[j];
 			t += 1;
 			j += 1;
 		}
+
 		//(3)
 		//将temp数组的元素拷贝到arr
 		t = 0;
